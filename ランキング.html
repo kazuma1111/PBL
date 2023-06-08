@@ -10,12 +10,22 @@
     <h1 class="text-background-test01">ランキング</h1>
     <div class="button-container">
         <div class="vertical-button">
-            <button class="button1">ドッヂボール</button><br>
-            <button class="button2">バレーボール</button><br>
-            <button class="button3">バスケットボール</button>
+            <button class="button1" onclick="rankFactory(this)">ドッヂボール</button><br>
+            <button class="button2" onclick="rankFactory(this)">バレーボール</button><br>
+            <button class="button3" onclick="rankFactory(this)">バスケットボール</button>
         </div>
         <button>管理者用</button>
     </div>
 
+    <script>
+        function rankFactory(button) {
+            //競技の値を取得
+            let selectedSport = button.textContent;
+            //タグ生成
+            let element = document.createElement("p");
+            let text = document.createTextNode(selectedSport);
+            document.body.appendChild(element).appendChild(text);
+        }
+    </script>
 </body>
 </html>
