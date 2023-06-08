@@ -1,0 +1,45 @@
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.4em;
+  padding: 5px;
+  background:#FFD9D7;
+}
+img {
+  width: 4%;
+  height: auto;
+}
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+.vertical-button{
+  background-color: rgb(22, 243, 70);
+  border: none;
+  border-radius:20%;
+  padding: 10px 20px; 
+}
+.container {
+  display: flex;
+  justify-content: center; /* 横方向（水平方向）の中央寄せ */
+  align-items: center; 
+}
+
+.left, .right {
+  flex: 1;
+  text-align: center;
+  margin: 0 0px;
+}
+
+  
+
+  
+  
+  
+  
+  
+  
