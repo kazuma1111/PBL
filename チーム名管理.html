@@ -8,23 +8,43 @@
 <script src="js/PBL.js"></script>
 </head>
 <body>
-  <h1 class="text-background-test01">ランキング管理画面</h1>
+    <h1 class="text-background-test01">ランキング管理画面</h1>
   <div>
   <input type="text" name="myTextBox" id="myTextBox" placeholder="チーム名登録">
   <button type="button" onclick="teamFactory()">追加</button>
 </div>
+<table>
+  <tr>
+    <td id="cell1"></td>
+    <td id="cell2"></td>
+    <td id="cell3"></td>
+  </tr>
+  
+</table>
   <p>登録済みチーム</p>
   <script>
     function teamFactory() {
+      let baseFontSize = 16; // 基準のフォントサイズ
         //競技の値を取得
         let addTeam = document.getElementById("myTextBox");
         //タグ生成
-        let element = document.createElement("p");
+        let element = document.createElement("p1");
+        element.setAttribute("class", "myNewElement");
         let text = document.createTextNode(addTeam.value);
         document.body.appendChild(element).appendChild(text);
         //テキストクリア
         addTeam.value = "";
+
     }
+    var cell1 = document.getElementById("cell1");
+    var button1 = document.createElement("button");
+    button1.textContent = "ボタン1";
+    button1.addEventListener("click", function() {
+      // ボタンがクリックされたときの処理
+      console.log("ボタン1がクリックされました");
+    });
+    cell1.appendChild(button1);
+   
 </script>
 </body>
 </html>
