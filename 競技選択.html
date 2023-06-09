@@ -10,3 +10,65 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>選択内容の表</title>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+    
+    table {
+      border-collapse: collapse;
+      width: 400px;
+      margin-top: 20px;
+    }
+    
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    
+    .selection {
+      margin-bottom: 10px;
+    }
+  </style>
+  <script>
+    function displaySelection() {
+      var selectedOption = document.getElementById("mySelect").value;
+      var displayArea = document.getElementById("displayArea");
+      
+      var table = document.getElementById("selectionTable");
+      var newRow = table.insertRow(table.rows.length);
+      
+      var cell = newRow.insertCell(0);
+      cell.innerHTML = selectedOption;
+    }
+  </script>
+</head>
+<body>
+  
+  <div class="container">
+    <select id="mySelect" onchange="displaySelection()">
+      <option value="">選択してください</option>
+      <option value="オプション1">オプション1</option>
+      <option value="オプション2">オプション2</option>
+      <option value="オプション3">オプション3</option>
+    </select>
+    
+    <div id="displayArea">
+      <table id="selectionTable">
+        <tr>
+          <th>選択内容</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+  
+</body>
+</html>
