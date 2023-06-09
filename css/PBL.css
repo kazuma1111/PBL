@@ -1,9 +1,14 @@
+body {
+  display: grid;
+  place-items: center;
+}
+
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
-  line-height: 1.4em;
+  line-height: 1em;
   padding: 5px;
-  background:#FFD9D7;
+  background:#14eeac;
 }
 img {
   width: 4%;
@@ -34,8 +39,21 @@ img {
   text-align: center;
   margin: 0 0px;
 }
+p1 {
+  height: 22px;
+}
+@media (max-width: 600px) {
+  .container {
+    display: block;
+  }
+  .myNewElement{
+    font-size: 3vw;
+  }
+  .box {
+    width: 100%;
+  }
+}
 
-  
 
   
   
