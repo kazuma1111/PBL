@@ -34,7 +34,15 @@ img {
   text-align: center;
   margin: 0 0px;
 }
+@media (max-width: 600px) {
+  .container {
+    display: block;
+  }
 
+  .box {
+    width: 100%;
+  }
+}
   
 
   
