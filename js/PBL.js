@@ -26,5 +26,17 @@
          console.log("No option selected");
        }
     }
+
+    function teamFactory() {
+      let baseFontSize = 16; // 基準のフォントサイズ
+        //競技の値を取得
+        let addTeam = document.getElementById("myTextBox");
+        let cell1 = document.getElementById("cell1");
+        let text = document.createTextNode(addTeam.value);
+        cell1.appendChild(text);
+        cell1.appendChild(document.createElement("br"));
+        //テキストクリア
+        addTeam.value = "";
+    } 
     
   

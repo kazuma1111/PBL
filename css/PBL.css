@@ -1,8 +1,8 @@
+/* 全体 */
 body {
   display: grid;
   place-items: center;
 }
-
 h1 {
   font-size: 2rem;
   font-weight: 600;
@@ -42,6 +42,18 @@ img {
 p1 {
   height: 22px;
 }
+/* チーム名管理用のCSS */
+.button1 {
+  position: fixed;
+  left: 150px;
+  bottom: 0;
+}
+.button2 {
+  position: fixed;
+  right: 150px;
+  bottom: 0;
+}
+/* スマホ */
 @media (max-width: 600px) {
   .container {
     display: block;
@@ -52,7 +64,20 @@ p1 {
   .box {
     width: 100%;
   }
+  .button1 {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+  .button2 {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+  }
 }
+
+
+
 
 
   
