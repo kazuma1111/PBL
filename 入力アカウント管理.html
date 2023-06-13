@@ -12,14 +12,29 @@
   <div>
   <input type="text" name="myTextBox" id="myTextBox" placeholder="新規アカウント名">
   <input type="text" name="myTextBox" id="myTextBox2" placeholder="パスワード">
-  <button>追加</button>
+  <button type="button" onclick="accountFactory()">追加</button>
 </div>
 <p>登録済みアカウント</p>
   <div>
     <a>name</a>
     <a>pass</a>
   </div>
-  <button>削除</button>
-  <a href="ランキング管理画面.html" class="button"><button>戻る</button></a>
+  <div id="result"></div>
+  <button class="button3">削除</button>
+  <a href="ランキング管理画面.html" class="button4"><button>戻る</button></a>
+  <script>
+    function accountFactory() {
+      let baseFontSize = 16; // 基準のフォントサイズ
+        //競技の値を取得
+        let addName = document.getElementById("myTextBox");
+        let addPass = document.getElementById("myTextBox2");
+        let result = document.getElementById("result");
+        var newText = addName.value + " " + addPass.value + "<br>";
+      result.innerHTML += newText;
+        //テキストクリア
+        addName.value = "";
+        addPass.value = "";
+    } 
+  </script>
 </body>
 </html>

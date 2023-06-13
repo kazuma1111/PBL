@@ -53,6 +53,16 @@ p1 {
   right: 150px;
   bottom: 0;
 }
+.button3 {
+  position: fixed;
+  left: 150px;
+  bottom: 0;
+}
+.button4 {
+  position: fixed;
+  right: 150px;
+  bottom: 0;
+}
 /* スマホ */
 @media (max-width: 600px) {
   .container {
@@ -72,6 +82,16 @@ p1 {
   .button2 {
     position: fixed;
     right: 0;
+    bottom: 0;
+  }
+  .button3 {
+    position: fixed;
+    left: 150px;
+    bottom: 0;
+  }
+  .button4 {
+    position: fixed;
+    right: 150px;
     bottom: 0;
   }
 }
