@@ -13,6 +13,12 @@
   padding: 20px 30px; 
 
 }
+/*ヘッダーのスタイル */
+header {
+  background-color: #b8df0b;
+  color: #fff;
+  padding: 5px;
+}
 @media (max-width: 600px) {
     .container {
       display: block;
@@ -24,3 +30,14 @@
       width: 100%;
     }
   }
+.container {
+  position: relative;
+  height: 100vh; /*画面の高さに合わせる場合　*/
+} 
+
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /*コンテンツのスタイルを指定　*/
+}
