@@ -10,6 +10,13 @@ header {
   color: #fff;
   padding: 5px;
 }
+h1 {
+  text-align: center;
+}
+body {
+  text-align: center;
+}
+
 img {
   width: 4%;
   height: auto;

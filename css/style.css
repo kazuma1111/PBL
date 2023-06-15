@@ -19,6 +19,9 @@ header {
   color: #fff;
   padding: 5px;
 }
+  h1 {
+    text-align: center;
+  }
 @media (max-width: 600px) {
     .container {
       display: block;
