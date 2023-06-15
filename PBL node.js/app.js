@@ -46,8 +46,10 @@ pg.query(
 );
 */
 
-//CAHT GPTより
-//何も表示されない
+
+
+/*node.js　DB操作　上のコードはテストコード 
+下のコードは動いている*/
 
 async function addAndFetchData(connecting) {
   console.log(connecting);
