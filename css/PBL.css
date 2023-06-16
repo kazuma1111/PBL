@@ -68,11 +68,16 @@ p1 {
   width: 300px; /* 幅を設定 */
   height: 200px; /* 高さを設定 */
   overflow: auto; /* スクロールバーを表示 */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .content {
-  display: flex;
   justify-content: space-between;
+} 
+.item {
+width: 100%;
 }
 
 /* スマホ */

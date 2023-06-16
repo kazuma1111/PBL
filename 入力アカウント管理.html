@@ -5,7 +5,7 @@
 <title>チーム名管理画面</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/PBL.css">
-<script src="js/PBL.js"></script>
+<!-- <script src="js/PBL.js"></script> -->
 </head>
 <body>
   <h1 class="text-background-test01">入力アカウント管理画面</h1>
@@ -18,18 +18,36 @@
 <p>登録済みアカウント</p>
 <button class="button">削除</button>
 </div>
-  <div class = "accountcontainer">
-    <div class="content">
-    <a class="item">name</a>
-    <a class="item">pass</a>
-    </div>
-  <div id="result"></div>
+<div class="accountcontainer">
+  <div class="content">
+    <div class="item">name</div>
+      <div id="item1"></div>
+  </div>
+  <div class="content1">
+    <div class="item">pass</div>
+      <div id="item2"></div>
+  </div>
 </div>
   <a href="ランキング管理画面.html" class="button"><button>戻る</button></a>
+
+  <script>
+    function accountFactory() {
+      let baseFontSize = 16; // 基準のフォントサイズ
+        //競技の値を取得
+        let addName = document.getElementById("myTextBox");
+        let addPass = document.getElementById("myTextBox2");
+        let item1 = document.getElementById("item1");
+        let item2 = document.getElementById("item2");
+        let name = document.createTextNode(addName.value);
+        let pass = document.createTextNode(addPass.value);
+        item1.appendChild(name);
+        item1.appendChild(document.createElement("br"));
+        item2.appendChild(pass);
+        item2.appendChild(document.createElement("br"));
+        //テキストクリア
+        addName.value = "";
+        addPass.value = "";
+    } 
+  </script>
 </body>
 </html>
-
-<div style="float:left;width:200px;"><div style="background:#000066; border:1px solid #000066; padding-left:10px; font-size:1.16em;"><font style="color:#ffffff; font-weight:bold;">■タイトルはこちら■</font></div><div style="border:1px solid #000066; padding:10px; font-size:1em;">本文はこちら！<br>
-  改行後の本文はこちら（ここは削除してください。）</div></div>
-  <div style="float:left;width:200px;"><div style="background:#000066; border:1px solid #000066; padding-left:10px; font-size:1.16em;"><font style="color:#ffffff; font-weight:bold;">■タイトルはこちら■</font></div><div style="border:1px solid #000066; padding:10px; font-size:1em;">本文はこちら！<br>
-  改行後の本文はこちら（ここは削除してください。）</div></div>
