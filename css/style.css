@@ -44,3 +44,6 @@ header {
   right: 0;
   /*コンテンツのスタイルを指定　*/
 }
+a.btn--red.btn--border-outset {
+  border: 6px outset #b9000e;
+}
