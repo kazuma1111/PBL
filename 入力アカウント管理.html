@@ -14,14 +14,19 @@
     </header>
   <input type="text" name="myTextBox" id="myTextBox" placeholder="新規アカウント名">
   <input type="text" name="myTextBox" id="myTextBox2" placeholder="パスワード">
-  <button>追加</button>
+  <button type="button" onclick="accountFactory()">追加</button>
 </div>
+<div class="container2">
 <p>登録済みアカウント</p>
-  <div>
-    <a>name</a>
-    <a>pass</a>
-  </div>
-  <a href="ランキング管理画面.html" class="button"><button style="width:10%;padding:10px;font-size:10px;">戻る</button></a>
-  <button style="width:8%;padding:0px;font-size:20px;">削除</button>
+<button class="button">削除</button>
+</div>
+  <div class = "accountcontainer">
+    <div class="content">
+    <a class="item">name</a>
+    <a class="item">pass</a>
+    </div>
+  <div id="result"></div>
+</div>
+  <a href="ランキング管理画面.html" class="button"><button>戻る</button></a>
 </body>
 </html>

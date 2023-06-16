@@ -1,22 +1,7 @@
-    // console.log('paoo');
-    // let dropdown = document.getElementById("myDropdown");
-    //   let selectedValue = dropdown.value;
-
-    //   console.log(selectedValue);
-
-
-    // function myFunction2() {
-    //   let button = document.getElementById("sample");
-    //   let samplename = sample.value;
-
-    //   console.log(samplename);
-    // }
+//ログイン.html用
     function myFunction() {
        let dropdown = document.getElementById("myDropdown");
        let selectedValue = dropdown.value;
-    
-      //  console.log(selectedValue);
-      // console.log('とりこ');
        if (selectedValue === "option1") {
         window.location.href = "ランキング管理画面.html";
        } else if (selectedValue === "option2") {
@@ -26,7 +11,7 @@
          console.log("No option selected");
        }
     }
-
+//チーム名管理.html用
     function teamFactory() {
       let baseFontSize = 16; // 基準のフォントサイズ
         //競技の値を取得
@@ -37,6 +22,19 @@
         cell1.appendChild(document.createElement("br"));
         //テキストクリア
         addTeam.value = "";
+    } 
+//入力アカウント管理.html用
+    function accountFactory() {
+      let baseFontSize = 16; // 基準のフォントサイズ
+        //競技の値を取得
+        let addName = document.getElementById("myTextBox");
+        let addPass = document.getElementById("myTextBox2");
+        let result = document.getElementById("result");
+        var newText = addName.value + " " + addPass.value + "<br>";
+      result.innerHTML += newText;
+        //テキストクリア
+        addName.value = "";
+        addPass.value = "";
     } 
     
   
