@@ -5,13 +5,13 @@
 <title>チーム名管理画面</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/PBL.css">
-<!-- <script src="js/PBL.js"></script> -->
+<script src="js/PBL.js"></script>
 </head>
 <body>
   <h1 class="text-background-test01">入力アカウント管理画面</h1>
-  <div>
-  <input type="text" name="myTextBox" id="myTextBox" placeholder="新規アカウント名">
-  <input type="text" name="myTextBox" id="myTextBox2" placeholder="パスワード">
+  <div class="alertarea">
+  <input type="email" name="myTextBox" id="myTextBox" placeholder="新規アドレス(@OICのみ)" maxlength="23">
+  <input type="tel" name="myTextBox" id="myTextBox2" placeholder="パスワード(8文字の数字)"  maxlength="8">
   <button type="button" onclick="accountFactory()">追加</button>
 </div>
 <div class="container2">
@@ -29,25 +29,5 @@
   </div>
 </div>
   <a href="ランキング管理画面.html" class="button"><button>戻る</button></a>
-
-  <script>
-    function accountFactory() {
-      let baseFontSize = 16; // 基準のフォントサイズ
-        //競技の値を取得
-        let addName = document.getElementById("myTextBox");
-        let addPass = document.getElementById("myTextBox2");
-        let item1 = document.getElementById("item1");
-        let item2 = document.getElementById("item2");
-        let name = document.createTextNode(addName.value);
-        let pass = document.createTextNode(addPass.value);
-        item1.appendChild(name);
-        item1.appendChild(document.createElement("br"));
-        item2.appendChild(pass);
-        item2.appendChild(document.createElement("br"));
-        //テキストクリア
-        addName.value = "";
-        addPass.value = "";
-    } 
-  </script>
 </body>
 </html>
