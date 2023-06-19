@@ -47,3 +47,15 @@ header {
 a.btn--red.btn--border-outset {
   border: 6px outset #b9000e;
 }
+.ranking-table {
+  width: 50%;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  margin: auto;
+}
+.ranking-table th,
+.ranking-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
