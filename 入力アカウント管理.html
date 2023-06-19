@@ -5,6 +5,7 @@
 <title>チーム名管理画面</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/PBL.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="js/PBL.js"></script>
 </head>
 <body>
@@ -16,18 +17,30 @@
 </div>
 <div class="container2">
 <p>登録済みアカウント</p>
-<button class="button">削除</button>
+<button class="button" id="deleteButton">削除</button>
 </div>
 <div class="accountcontainer">
   <div class="content">
     <div class="item">name</div>
-      <div id="item1"></div>
+      <div class="item1" id="item1"></div>
   </div>
   <div class="content1">
     <div class="item">pass</div>
-      <div id="item2"></div>
+      <div class="item1" id="item2"></div>
   </div>
 </div>
+<script>
+$(document).ready(function() {
+  $("#deleteButton").on("click", function() {
+    $(".item1.selected").remove(); // クラス名が "selected" の要素を削除
+    console.log("ボタンがクリックされました");
+  });
+  
+  $(".item1").on("click", function() {
+    $(this).toggleClass("selected"); // クリックされた要素に "selected" クラスをトグル
+  });
+});
+</script>
   <a href="ランキング管理画面.html" class="button"><button>戻る</button></a>
 </body>
 </html>
