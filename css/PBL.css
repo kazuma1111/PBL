@@ -4,11 +4,11 @@
   margin: 0;
   padding: 150;
 } */
-body{
+/* body{
   display: grid;
   place-items: center;
   font-family: Arial, sans-serif;
-}
+} */
 /*ヘッダーのスタイル */
 header {
   background-color: #b8df0b;
