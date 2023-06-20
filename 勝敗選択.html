@@ -21,6 +21,11 @@
 <div>
 <a href="チーム選択.html" class="button"><button>戻る</button></a>
 <a href="点数入力.html" class="button"><button>確定</button></a>
-</div>
+<script>
+document.addEventListener('selectionchange', function() {
+    var selectedText = window.getSelection().toString();
+    document.getElementById('cheakbox1').textContent = cheakbox1;
+  });
+</script>
 </body>
 </html>
