@@ -83,7 +83,7 @@
      let register = document.getElementById("register1");
      let checksportname= addsportName.value.trim();
        if (checksportname !== "") {
-           textArray.push(checksportname);  // 配列にテキストを追加
+           textArray1.push(checksportname);  // 配列にテキストを追加
            register.innerHTML += "<p onclick=\"selectText(this)\">" + checksportname + "</p>";  // テキストを表示
        }
        addsportName.value = ""; 
@@ -97,13 +97,41 @@
        while (selectedElements.length > 0) {
            let selectedElement = selectedElements[0];
            let selectedText = selectedElement.textContent;
-           let index = textArray.indexOf(selectedText);
+           let index = textArray1.indexOf(selectedText);
            if (index > -1) {
-               textArray.splice(index, 1);  // 配列からテキストを削除
+               textArray1.splice(index, 1);  // 配列からテキストを削除
            }
            selectedElement.remove();  // 項目を表示から削除
        }
    }
   
+//チーム名管理
+let textArray2 = [];  // テキストの配列を管理する変数
+function teamFactory() {
+  let addteamName = document.getElementById("myTextBox4");
+  let team = document.getElementById("team1");
+  let checkteamname= addteamName.value.trim();
+    if (checkteamname !== "") {
+        textArray2.push(checkteamname);  // 配列にテキストを追加
+        team.innerHTML += "<p onclick=\"selectText(this)\">" + checkteamname + "</p>";  // テキストを表示
+    }
+    addteamName.value = ""; 
+}
+function selectText(element) {
+    element.classList.toggle("selected");  // 選択した項目に"selected"クラスを追加または削除
+}
+function deleteButton2() {
+    let team1 = document.getElementById("team1");
+    let selectedElements = team1.getElementsByClassName("selected");
+    while (selectedElements.length > 0) {
+        let selectedElement = selectedElements[0];
+        let selectedText = selectedElement.textContent;
+        let index = textArray2.indexOf(selectedText);
+        if (index > -1) {
+            textArray2.splice(index, 1);  // 配列からテキストを削除
+        }
+        selectedElement.remove();  // 項目を表示から削除
+    }
+}
 
   
