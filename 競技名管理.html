@@ -12,11 +12,16 @@
   <h1 class="text-background-test01">ランキング管理画面</h1>
   </header>
   <div>
-    <input type="text" name="myTextBox" id="myTextBox" placeholder="競技名を入力しよう">
-    <button type="button" onclick="teamFactory()">追加</button>
+    <input type="text" name="myTextBox" id="myTextBox3" placeholder="競技名を入力しよう">
+    <button type="button" onclick="sportFactory()">追加</button>
   </div>
-  <p>登録済み競技</p>
-  <p1 id="cell1"></p1>
+  <div class="content1">
+    <div class="register">登録済み競技
+      <button class="button" onclick="deleteButton1()">削除</button>
+    </div>
+    
+      <div class="register1" id="register1"></div>
+      </div>
   <a href="ランキング管理画面.html" class="button1"><button>戻る</button></a>
   <a href="チーム名管理.html" class="button2"><button>次へ</button></a>
 </body>
