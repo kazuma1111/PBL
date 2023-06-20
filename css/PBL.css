@@ -152,9 +152,19 @@ PHP
   justify-content: center;
   align-items: center;
   height: 10vh;
+  width: 100;
+  padding: 0px;
 }
 .button5 {
   margin-right: 50px;
+}
+.button-container3 {
+  display: flex;
+  gap: 50px;
+  margin: 0 500px;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
 }
 
 
