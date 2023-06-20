@@ -134,4 +134,28 @@ function deleteButton2() {
     }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  var checkbox = document.getElementById('checkbox8');
+  var checkboxStateElement = document.getElementById('checkboxState');
+
+  function saveCheckboxState() {
+    var isChecked = checkbox.checked;
+    localStorage.setItem('checkboxState', isChecked);
+    displayCheckboxState(isChecked);
+  }
+
+  function displayCheckboxState(state) {
+    checkboxStateElement.textContent = state ? 'チェック済み' : '未チェック';
+  }
+
+  checkbox.addEventListener('change', saveCheckboxState);
+
+  var savedCheckboxState = localStorage.getItem('checkboxState');
+  if (savedCheckboxState === 'true') {
+    checkbox.checked = true;
+  }
+
+  displayCheckboxState(checkbox.checked);
+});
+
   
