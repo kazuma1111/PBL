@@ -4,11 +4,10 @@
   margin: 0;
   padding: 150;
 } */
-/* body{
-  display: grid;
+body{
   place-items: center;
   font-family: Arial, sans-serif;
-} */
+}
 /*ヘッダーのスタイル */
 header {
   background-color: #b8df0b;
@@ -50,7 +49,11 @@ img {
 .left, .right {
   flex: 1;
   text-align: left;
-  margin: 0 40px;
+  margin: 0 50px;
+}
+.left{
+  position: relative;
+  left: 20%;
 }
 /* ランキング管理画面のCSS　*/
 .button {
