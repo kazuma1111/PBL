@@ -160,7 +160,11 @@ PHP
 }
 .button-container3 {
   display: flex;
-  gap: 100px;
+  gap: 50px;
+  margin: 0 500px;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
 }
 
 
