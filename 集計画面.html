@@ -8,11 +8,104 @@
 </head>
 <body>
 <h1>ただいま集計中です</h1>
+  <div class="baseBox">
+    <div class="backStr">oic</div>
+    <div class="frontStr">競技頑張ろう<br>ドッヂボール<br>バレーボール</div>
+  </div>
+  <style type="text/css">
 
-<div class="textbox-container">
-  <input type="text" name="myTextBox" id="myTextBox" placeholder="チーム名登録">
-  <button type="button" onclick="teamFactory()">追加</button>
-</div>
+    .baseBox {
+     /* --- 親BOXの定義 --------------------------------------------*/
+      display       : inline-block;         /* インラインブロック化 */
+      position      : relative;             /* 親要素               */
+      overflow      : hidden;               /* はみ出しは非表示     */
+      margin        : 0 auto;               /* BOXの位置(中央寄せ)  */
+      width         : 1200px;                /* BOXの横幅            */
+      height        : 550px;                /* BOXの高さ            */
+      background    : #fff;                 /* BOXの背景色          */
+    }
+    
+     /* --- 前面文字の定義 -----------------------------------------*/
+    .baseBox .frontStr {
+      display       : inline-block;         /* インラインブロック化 */
+      position      : absolute;             /* 親要素からの相対位置 */
+      padding       : 100px;                 /* BOX内の余白          */
+      border        : 10px solid #999;       /* BOXの枠線            */
+      font-size     : 18pt;                 /* 前景文字のサイズ     */
+      font-weight   : bold;                 /* 太字                 */
+      top           : 0;                    /* 親要素にサイズにする */
+      left          : 0;
+      right         : 0;
+      bottom        : 0;
+    }
+     /* --- 背景透かし文字の定義 -----------------------------------*/
+    .baseBox .backStr {
+      position      : absolute;             /* 親要素からの相対位置 */
+      display       : inline-block;         /* インラインブロック化 */
+      white-space   : normal;               /* 折り返ししない       */
+      font-size     : 24pt;                 /* 背景透かし文字サイズ */
+      font-weight   : bold;                 /* 太字                 */
+      color         : rgba(255, 255, 26, 0.83); /* 背景透かし文字色     */
+                                            /* 中心寄せ＆角度       */
+      top           : 50%;
+      left          : 50%;
+      transform     : translate(-50%, -50%)
+                      rotate(144deg);
+    }
+    </style>
 
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+    
+    .scoreboard {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      font-size: 24px;
+    }
+    
+    .team {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 20px;
+    }
+    
+    .team-logo {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 10px;
+    }
+    
+    .timer {
+      font-size: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="scoreboard">
+    <div class="team">
+      <img class="team-logo" src="oic.png" alt="Home Team Logo">
+      <span>Home</span>
+      <span>3</span>
+    </div>
+    <div class="team">
+      <img class="team-logo" src="toriko.png" alt="Away Team Logo">
+      <span>Away</span>
+      <span>2</span>
+    </div>
+    <div class="timer">45:32</div>
+  </div>
 </body>
 </html>
