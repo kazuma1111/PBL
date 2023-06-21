@@ -133,29 +133,62 @@ function deleteButton2() {
         selectedElement.remove();  // 項目を表示から削除
     }
 }
+//チーム選択
+document.addEventListener('DOMContentLoaded', function() {
+  var form = document.querySelector('form');
+  form.addEventListener('submit', function(event) {
+      var selectedTeams = [];
+      var checkboxes = form.querySelectorAll('input[name="checkboxLabel"]:checked');
+      checkboxes.forEach(function(checkbox) {
+          selectedTeams.push(checkbox.value);
+      });
+
+      var checkboxState = form.querySelector('input[name="checkboxState"]:checked');
+      if (!checkboxState) {
+          checkboxState = form.querySelector('input[name="checkboxState"]');
+      }
+
+      var urlParams = new URLSearchParams();
+      urlParams.set('checkboxState', checkboxState.value);
+      selectedTeams.forEach(function(team) {
+          urlParams.append('checkboxLabel', team);
+      });
+
+      var nextPageURL = '勝敗選択.html?' + urlParams.toString();
+      window.location.href = nextPageURL;
+
+      event.preventDefault();
+  });
+});
+//勝敗選択
+document.addEventListener('DOMContentLoaded', function() {
+  var urlParams = new URLSearchParams(window.location.search);
+  var checkboxState = urlParams.get('checkboxState');
+  var checkboxLabel = urlParams.get('checkboxLabel');
+  var checkboxContentElement = document.getElementById('checkboxContent');
+
+  if (checkboxState === 'true' && checkboxLabel !== null && checkboxLabel !== '') {
+      checkboxContentElement.textContent = '選択中のチーム: ' + checkboxLabel;
+  }
+});
 
 document.addEventListener('DOMContentLoaded', function() {
-  var checkbox = document.getElementById('checkbox8');
-  var checkboxStateElement = document.getElementById('checkboxState');
+  // 2つ前のページのURLパラメータを取得
+  var previousURL = document.referrer;
+  var urlParams = new URLSearchParams(previousURL.split('?')[1]);
 
-  function saveCheckboxState() {
-    var isChecked = checkbox.checked;
-    localStorage.setItem('checkboxState', isChecked);
-    displayCheckboxState(isChecked);
+  // パラメータから値を取得
+  var checkboxState = urlParams.get('checkboxState');
+  var checkboxLabel = urlParams.get('checkboxLabel');
+
+  // 取得した値を使用して適切な処理を行う
+  if (checkboxState === 'true') {
+    // チェックボックスがチェックされている場合の処理
+    console.log('チェックボックスの内容:', checkboxLabel);
+  } else {
+    // チェックボックスがチェックされていない場合の処理
+    console.log('チェックボックスはチェックされていません。');
   }
-
-  function displayCheckboxState(state) {
-    checkboxStateElement.textContent = state ? 'チェック済み' : '未チェック';
-  }
-
-  checkbox.addEventListener('change', saveCheckboxState);
-
-  var savedCheckboxState = localStorage.getItem('checkboxState');
-  if (savedCheckboxState === 'true') {
-    checkbox.checked = true;
-  }
-
-  displayCheckboxState(checkbox.checked);
 });
 /**集計画面 */
 'use strict';
