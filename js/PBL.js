@@ -240,3 +240,10 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('チェックボックスはチェックされていません。');
   }
 });
+/**集計画面 */
+'use strict';
+
+let btn = document.getElementById('triggerButton');
+btn.addEventListener('click' ,function (e){
+  alert('clicked!');
+}, false);
