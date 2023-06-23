@@ -11,6 +11,56 @@
          console.log("No option selected");
        }
     }
+    
+//ランキング
+var button1 = document.getElementById('button1');
+var button2 = document.getElementById('button2');
+var button3 = document.getElementById('button3');
+let cell1 = document.getElementById('cell1');
+// ボタン1のクリックイベントリスナー
+button1.addEventListener('click', function() {
+  // ボタン1を無効化
+  button1.disabled = true;
+  
+  // ボタン2を有効化
+  button2.disabled = false;
+
+  // ボタン3を有効化
+  button3.disabled = false;
+  
+  // テキストを生成して表示
+  cell1.textContent = button1.textContent 
+});
+
+// ボタン2のクリックイベントリスナー
+button2.addEventListener('click', function() {
+  // ボタン2を無効化
+  button2.disabled = true;
+  
+  // ボタン1を有効化
+  button1.disabled = false;
+
+  // ボタン3を有効化
+  button3.disabled = false;
+  
+  // テキストを生成して表示
+  cell1.textContent = button2.textContent 
+});
+// ボタン2のクリックイベントリスナー
+button3.addEventListener('click', function() {
+  // ボタン2を無効化
+  button3.disabled = true;
+  
+  // ボタン1を有効化
+  button1.disabled = false;
+
+  // ボタン3を有効化
+  button2.disabled = false;
+  
+  // テキストを生成して表示
+  cell1.textContent = button3.textContent 
+});
+
 //チーム名管理.html用
     let textArray = [];  // テキストの配列を管理する変数
     function accountFactory() {
