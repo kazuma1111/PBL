@@ -105,6 +105,36 @@
    }
 /**集計画面 */
 'use strict';
+//勝敗選択
+document.addEventListener('DOMContentLoaded', function() {
+  var urlParams = new URLSearchParams(window.location.search);
+  var checkboxState = urlParams.get('checkboxState');
+  var checkboxLabel = urlParams.get('checkboxLabel');
+  var checkboxContentElement = document.getElementById('checkboxContent');
+
+  if (checkboxState === 'true' && checkboxLabel !== null && checkboxLabel !== '') {
+      checkboxContentElement.textContent = '選択中のチーム: ' + checkboxLabel;
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  // 2つ前のページのURLパラメータを取得
+  var previousURL = document.referrer;
+  var urlParams = new URLSearchParams(previousURL.split('?')[1]);
+
+  // パラメータから値を取得
+  var checkboxState = urlParams.get('checkboxState');
+  var checkboxLabel = urlParams.get('checkboxLabel');
+
+  // 取得した値を使用して適切な処理を行う
+  if (checkboxState === 'true') {
+    // チェックボックスがチェックされている場合の処理
+    console.log('チェックボックスの内容:', checkboxLabel);
+  } else {
+    // チェックボックスがチェックされていない場合の処理
+    console.log('チェックボックスはチェックされていません。');
+  }
+});
 
 let btn = document.getElementById('triggerButton');
 btn.addEventListener('click' ,function (e){
