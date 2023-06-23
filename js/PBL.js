@@ -11,55 +11,6 @@
          console.log("No option selected");
        }
     }
-    
-//ランキング
-var button1 = document.getElementById('button1');
-var button2 = document.getElementById('button2');
-var button3 = document.getElementById('button3');
-let cell1 = document.getElementById('cell1');
-// ボタン1のクリックイベントリスナー
-button1.addEventListener('click', function() {
-  // ボタン1を無効化
-  button1.disabled = true;
-  
-  // ボタン2を有効化
-  button2.disabled = false;
-
-  // ボタン3を有効化
-  button3.disabled = false;
-  
-  // テキストを生成して表示
-  cell1.textContent = button1.textContent 
-});
-
-// ボタン2のクリックイベントリスナー
-button2.addEventListener('click', function() {
-  // ボタン2を無効化
-  button2.disabled = true;
-  
-  // ボタン1を有効化
-  button1.disabled = false;
-
-  // ボタン3を有効化
-  button3.disabled = false;
-  
-  // テキストを生成して表示
-  cell1.textContent = button2.textContent 
-});
-// ボタン2のクリックイベントリスナー
-button3.addEventListener('click', function() {
-  // ボタン2を無効化
-  button3.disabled = true;
-  
-  // ボタン1を有効化
-  button1.disabled = false;
-
-  // ボタン3を有効化
-  button2.disabled = false;
-  
-  // テキストを生成して表示
-  cell1.textContent = button3.textContent 
-});
 
 //チーム名管理.html用
     let textArray = [];  // テキストの配列を管理する変数
@@ -70,8 +21,6 @@ button3.addEventListener('click', function() {
       let item2 = document.getElementById("item2");
       let checkname= addName.value.trim();
       let checkpass= addPass.value.trim();
-      let name = document.createTextNode(addName.value);
-      let pass = document.createTextNode(addPass.value);
       let oicPattern = /^\d+@oic-ok\.ac\.jp$/;
       let numberPattern = /^\d+$/;
       if (!oicPattern.test(checkname)) {
@@ -154,92 +103,6 @@ button3.addEventListener('click', function() {
            selectedElement.remove();  // 項目を表示から削除
        }
    }
-  
-//チーム名管理
-let textArray2 = [];  // テキストの配列を管理する変数
-function teamFactory() {
-  let addteamName = document.getElementById("myTextBox4");
-  let team = document.getElementById("team1");
-  let checkteamname= addteamName.value.trim();
-    if (checkteamname !== "") {
-        textArray2.push(checkteamname);  // 配列にテキストを追加
-        team.innerHTML += "<p onclick=\"selectText(this)\">" + checkteamname + "</p>";  // テキストを表示
-    }
-    addteamName.value = ""; 
-}
-function selectText(element) {
-    element.classList.toggle("selected");  // 選択した項目に"selected"クラスを追加または削除
-}
-function deleteButton2() {
-    let team1 = document.getElementById("team1");
-    let selectedElements = team1.getElementsByClassName("selected");
-    while (selectedElements.length > 0) {
-        let selectedElement = selectedElements[0];
-        let selectedText = selectedElement.textContent;
-        let index = textArray2.indexOf(selectedText);
-        if (index > -1) {
-            textArray2.splice(index, 1);  // 配列からテキストを削除
-        }
-        selectedElement.remove();  // 項目を表示から削除
-    }
-}
-//チーム選択
-document.addEventListener('DOMContentLoaded', function() {
-  var form = document.querySelector('form');
-  form.addEventListener('submit', function(event) {
-      var selectedTeams = [];
-      var checkboxes = form.querySelectorAll('input[name="checkboxLabel"]:checked');
-      checkboxes.forEach(function(checkbox) {
-          selectedTeams.push(checkbox.value);
-      });
-
-      var checkboxState = form.querySelector('input[name="checkboxState"]:checked');
-      if (!checkboxState) {
-          checkboxState = form.querySelector('input[name="checkboxState"]');
-      }
-
-      var urlParams = new URLSearchParams();
-      urlParams.set('checkboxState', checkboxState.value);
-      selectedTeams.forEach(function(team) {
-          urlParams.append('checkboxLabel', team);
-      });
-
-      var nextPageURL = '勝敗選択.html?' + urlParams.toString();
-      window.location.href = nextPageURL;
-
-      event.preventDefault();
-  });
-});
-//勝敗選択
-document.addEventListener('DOMContentLoaded', function() {
-  var urlParams = new URLSearchParams(window.location.search);
-  var checkboxState = urlParams.get('checkboxState');
-  var checkboxLabel = urlParams.get('checkboxLabel');
-  var checkboxContentElement = document.getElementById('checkboxContent');
-
-  if (checkboxState === 'true' && checkboxLabel !== null && checkboxLabel !== '') {
-      checkboxContentElement.textContent = '選択中のチーム: ' + checkboxLabel;
-  }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  // 2つ前のページのURLパラメータを取得
-  var previousURL = document.referrer;
-  var urlParams = new URLSearchParams(previousURL.split('?')[1]);
-
-  // パラメータから値を取得
-  var checkboxState = urlParams.get('checkboxState');
-  var checkboxLabel = urlParams.get('checkboxLabel');
-
-  // 取得した値を使用して適切な処理を行う
-  if (checkboxState === 'true') {
-    // チェックボックスがチェックされている場合の処理
-    console.log('チェックボックスの内容:', checkboxLabel);
-  } else {
-    // チェックボックスがチェックされていない場合の処理
-    console.log('チェックボックスはチェックされていません。');
-  }
-});
 /**集計画面 */
 'use strict';
 

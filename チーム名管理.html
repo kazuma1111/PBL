@@ -5,7 +5,6 @@
 <title>チーム名管理画面</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/PBL.css">
-<script src="js/PBL.js"></script>
 </head>
 <body>
   <header>
@@ -23,5 +22,34 @@
   </div>
   <a href="競技名管理.html" class="button1"><button>戻る</button></a>
   <a href="ランキング管理画面.html" class="button2"><button>確定</button></a>
+  <script>
+    let textArray2 = [];  // テキストの配列を管理する変数
+function teamFactory() {
+  let addteamName = document.getElementById("myTextBox4");
+  let team = document.getElementById("team1");
+  let checkteamname= addteamName.value.trim();
+    if (checkteamname !== "") {
+        textArray2.push(checkteamname);  // 配列にテキストを追加
+        team.innerHTML += "<p onclick=\"selectText(this)\">" + checkteamname + "</p>";  // テキストを表示
+    }
+    addteamName.value = ""; 
+}
+function selectText(element) {
+    element.classList.toggle("selected");  // 選択した項目に"selected"クラスを追加または削除
+}
+function deleteButton2() {
+    let team1 = document.getElementById("team1");
+    let selectedElements = team1.getElementsByClassName("selected");
+    while (selectedElements.length > 0) {
+        let selectedElement = selectedElements[0];
+        let selectedText = selectedElement.textContent;
+        let index = textArray2.indexOf(selectedText);
+        if (index > -1) {
+            textArray2.splice(index, 1);  // 配列からテキストを削除
+        }
+        selectedElement.remove();  // 項目を表示から削除
+    }
+}
+  </script>
 </body>
 </html>

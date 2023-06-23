@@ -5,7 +5,6 @@
 <title>チーム選択画面</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/PBL.css">
-<script src="js/PBL.js"></script>
 </head>
 <body>
 <header>
@@ -28,5 +27,33 @@
     <input type="submit" value="入力">
 </form>
 <a href="競技選択.html" class="button"><button>戻る</button></a>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var form = document.querySelector('form');
+        form.addEventListener('submit', function(event) {
+            var selectedTeams = [];
+            var checkboxes = form.querySelectorAll('input[name="checkboxLabel"]:checked');
+            checkboxes.forEach(function(checkbox) {
+                selectedTeams.push(checkbox.value);
+            });
+      
+            var checkboxState = form.querySelector('input[name="checkboxState"]:checked');
+            if (!checkboxState) {
+                checkboxState = form.querySelector('input[name="checkboxState"]');
+            }
+      
+            var urlParams = new URLSearchParams();
+            urlParams.set('checkboxState', checkboxState.value);
+            selectedTeams.forEach(function(team) {
+                urlParams.append('checkboxLabel', team);
+            });
+      
+            var nextPageURL = '勝敗選択.html?' + urlParams.toString();
+            window.location.href = nextPageURL;
+      
+            event.preventDefault();
+        });
+      });
+</script>
 </body>
 </html>
