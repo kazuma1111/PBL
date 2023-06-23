@@ -105,8 +105,9 @@
    }
 /**集計画面 */
 'use strict';
-
+//勝敗選択
 let btn = document.getElementById('triggerButton');
 btn.addEventListener('click' ,function (e){
   alert('clicked!');
 }, false);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
