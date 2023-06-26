@@ -11,6 +11,11 @@
          console.log("No option selected");
        }
     }
+    function changeLink() {
+      let dropdown = document.getElementById("myDropdown");
+      let selectedValue = dropdown.value;
+      window.location.href = selectedValue;
+    }
 
 //チーム名管理.html用
     let textArray = [];  // テキストの配列を管理する変数
