@@ -59,6 +59,14 @@ img {
 img.loginImg {
   width: 30px;
   height: 40px;
+  position: relative;
+  top: 16px;
+  right: 10px;
+}
+.button_line007 {
+  position: relative;
+  top: 16px;
+  right: 10px;
 }
 /* ランキング管理画面のCSS　*/
 .button {
