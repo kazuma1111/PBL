@@ -16,7 +16,6 @@
   </div>
   <div class="content1">
     <div class="register">
-      <!--<button class="button" onclick="deleteButton()">削除</button>-->
     </div>
     <table id="dataTable">
       <thead>
@@ -35,6 +34,7 @@
     <a type="button" href="競技名管理.html" style="width: 10rem;top: 25rem; margin-right: 45rem;">戻る</a>
     <a type="button" href="チーム名管理.html" style="width: 10rem;top: 25rem; margin-left: 5rem;">登録</a>
 </div>
+
   <script>
     let textArray2 = [];  // テキストの配列を管理する変数
 function teamFactory() {
@@ -78,7 +78,6 @@ function deleteRow(button) {
   let tableBody = document.getElementById("dataTable").getElementsByTagName("tbody")[0];
   var row = button.parentNode.parentNode;
   tableBody.removeChild(row);
-  
 }
 </script>
 </body>

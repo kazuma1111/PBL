@@ -16,13 +16,12 @@
   </div>
   <div class="content1">
     <div class="register">
-      <button class="button" onclick="deleteButton1()">削除</button>
     </div>
-
     <table id="dataTable">
       <thead>
         <tr>
           <th>登録競技</th>
+          <th>削除ボタン</th>
         </tr>
       </thead>
       <tr>
@@ -30,9 +29,7 @@
         </tbody>
       </tr>
         </table>
-      
     </div>
-
   <div class="button_line007" style="display: flex;">
     <a type="button" href="ランキング管理画面.html" style="width: 10rem;top: 25rem; margin-right: 45rem;">戻る</a>
     <a type="button" href="チーム名管理.html" style="width: 10rem;top: 25rem; margin-left: 5rem;">次へ</a>
@@ -61,6 +58,16 @@ newRow.appendChild(newCell);
 
 // 新しい行をテーブルのtbodyに追加
 tableBody.appendChild(newRow);
+
+// 操作セルを作成
+var operationCell = newRow.insertCell();
+        var deleteButton = document.createElement("button");
+        deleteButton.innerText = "削除";
+        deleteButton.onclick = function() {
+          // 削除ボタンがクリックされたときの処理
+          deleteRow(this); // 削除ボタンの親要素を渡して削除処理を実行
+        };
+        operationCell.appendChild(deleteButton);
 }
 
 // テキストエリアをクリア
@@ -69,18 +76,10 @@ document.getElementById("myTextBox3").value = "";
 function selectText(element) {
   element.classList.toggle("selected");  // 選択した項目に"selected"クラスを追加または削除
 }
-function deleteButton1() {
-  let sport1 = document.getElementById("sport1"); //73、74の2行はおそらく必要ない
-  let selectedElements = sport1.getElementsByClassName("selected");
-  while (selectedElements.length > 0) {
-      let selectedElement = selectedElements[0];
-      let selectedText = selectedElement.textContent;
-      let index = textArray2.indexOf(selectedText);
-      if (index > -1) {
-          textArray2.splice(index, 1);  // 配列からテキストを削除
-      }
-      selectedElement.remove();  // 項目を表示から削除
-  }
+function deleteRow(button) {
+  let tableBody = document.getElementById("dataTable").getElementsByTagName("tbody")[0];
+  var row = button.parentNode.parentNode;
+  tableBody.removeChild(row);
 }
 </script>
 </body>
