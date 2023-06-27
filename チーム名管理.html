@@ -16,12 +16,13 @@
   </div>
   <div class="content1">
     <div class="register">
-      <button class="button" onclick="deleteButton1()">削除</button>
+      <!--<button class="button" onclick="deleteButton()">削除</button>-->
     </div>
     <table id="dataTable">
       <thead>
         <tr>
           <th>登録チーム</th>
+          <th>削除ボタン</th>
         </tr>
       </thead>
       <tr>
@@ -38,18 +39,18 @@
     let textArray2 = [];  // テキストの配列を管理する変数
 function teamFactory() {
   // テキストエリアの値を取得
-  var inputText = document.getElementById("myTextBox4").value;
+  let inputText = document.getElementById("myTextBox4").value
 
   // テーブルのtbody要素を取得
-  var tableBody = document.getElementById("dataTable").getElementsByTagName("tbody")[0];
+  let tableBody = document.getElementById("dataTable").getElementsByTagName("tbody")[0];
 
   if (inputText !== "") {
   // 新しい行を作成
-  var newRow = document.createElement("tr");
+  let newRow = document.createElement("tr");
 
   // 新しいセルを作成してテキストを設定
-  var newCell = document.createElement("td");
-  var newText = document.createTextNode(inputText);
+  let newCell = document.createElement("td");
+  let newText = document.createTextNode(inputText);
   newCell.appendChild(newText);
 
   // 新しいセルを行に追加
@@ -57,26 +58,27 @@ function teamFactory() {
 
   // 新しい行をテーブルのtbodyに追加
   tableBody.appendChild(newRow);
+
+  // 操作セルを作成
+  var operationCell = newRow.insertCell();
+        var deleteButton = document.createElement("button");
+        deleteButton.innerText = "削除";
+        deleteButton.onclick = function() {
+          // 削除ボタンがクリックされたときの処理
+          deleteRow(this); // 削除ボタンの親要素を渡して削除処理を実行
+        };
+        operationCell.appendChild(deleteButton);
   }
 
   // テキストエリアをクリア
   document.getElementById("myTextBox4").value = "";
 }
-function selectText(element) {
-    element.classList.toggle("selected");  // 選択した項目に"selected"クラスを追加または削除
-}
-function deleteButton2() {
-    let team1 = document.getElementById("team1");
-    let selectedElements = team1.getElementsByClassName("selected");
-    while (selectedElements.length > 0) {
-        let selectedElement = selectedElements[0];
-        let selectedText = selectedElement.textContent;
-        let index = textArray2.indexOf(selectedText);
-        if (index > -1) {
-            textArray2.splice(index, 1);  // 配列からテキストを削除
-        }
-        selectedElement.remove();  // 項目を表示から削除
-    }
+
+function deleteRow(button) {
+  let tableBody = document.getElementById("dataTable").getElementsByTagName("tbody")[0];
+  var row = button.parentNode.parentNode;
+  tableBody.removeChild(row);
+  
 }
 </script>
 </body>
