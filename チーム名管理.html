@@ -10,6 +10,35 @@
   <header>
     <h1 class="text-background-test01">ランキング管理画面</h1>
   </header>  
+  <div>
+    <input type="text" name="myTextBox" id="myTextBox4" placeholder="チーム名を入力しよう">
+    <button type="button" onclick="teamFactory()">追加</button>
+  </div>
+  <div class="content1">
+    <div class="register">
+      <button class="button" onclick="deleteButton1()">削除</button>
+    </div>
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th>登録チーム</th>
+        </tr>
+      </thead>
+      <tr>
+        <tbody>
+        </tbody>
+      </tr>
+        </table>
+      
+    </div>
+
+  <div class="button_line007" style="display: flex;">
+    <a type="button" href="競技名管理.html" style="width: 10rem;top: 25rem; margin-right: 45rem;">戻る</a>
+    <a type="button" href="チーム名管理.html" style="width: 10rem;top: 25rem; margin-left: 5rem;">登録</a>
+</div>
+</body>
+</html>
+
   <script>
     let textArray2 = [];  // テキストの配列を管理する変数
 function teamFactory() {
