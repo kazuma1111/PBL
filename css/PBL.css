@@ -103,7 +103,7 @@ table {
   border-collapse:  collapse; /* セルの線を重ねる */ 
 }
 th {
-  background-color: #e0e0e0;
+  background-color: #06c5f5;
   border: 1px solid rgb(0, 0, 0);
   padding: 10px; 
 }
@@ -259,11 +259,11 @@ PHP
   color: #313131;
   transition: 0.3s ease-in-out;
   font-weight: 600;
-  background: #eee;
+  background: #06c5f5;
 }
 .button_line007 a:hover {
-  background: #ebfcfe;
-  color: #6bb6ff;
+  background: #73ff01;
+  color: #eee;
 }
 .button_line007 a:before, .button_line007 a:after {
 box-sizing: inherit;
@@ -286,13 +286,13 @@ width: 100%;
 height: 100%;
 }
 .button_line007 a:hover:before {
-border-top-color: #6bb6ff;
-border-right-color: #6bb6ff;
+border-top-color: #eee;
+border-right-color: #eee;
 transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
 }
 .button_line007 a:hover:after {
-border-bottom-color: #6bb6ff;
-border-left-color: #6bb6ff;
+border-bottom-color: #eee;
+border-left-color: #eee;
 transition: border-color 0s ease-out 0.2s, width 0.15s ease-out 0.2s, height 0.15s ease-out 0.3s;
 }
 
