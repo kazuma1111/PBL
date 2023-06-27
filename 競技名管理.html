@@ -5,7 +5,6 @@
 <title>競技名管理画面</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/PBL.css">
-<script src="js/PBL.js"></script>
 </head>
 <body>
   <header>
@@ -16,11 +15,21 @@
     <button type="button" onclick="sportFactory()">追加</button>
   </div>
   <div class="content1">
-    <div class="register">登録済み競技
+    <div class="register">
       <button class="button" onclick="deleteButton1()">削除</button>
     </div>
-    
-      <div class="register1" id="register1"></div>
+
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th>登録競技</th>
+        </tr>
+      </thead>
+      <tr>
+        <tbody>
+        </tbody>
+      </tr>
+        </table>
       
     </div>
 
@@ -28,5 +37,51 @@
     <a type="button" href="ランキング管理画面.html" style="width: 10rem;top: 25rem; margin-right: 45rem;">戻る</a>
     <a type="button" href="チーム名管理.html" style="width: 10rem;top: 25rem; margin-left: 5rem;">次へ</a>
 </div>
+
+<script>
+  let textArray2 = [];  // テキストの配列を管理する変数
+function sportFactory() {
+// テキストエリアの値を取得
+var inputText = document.getElementById("myTextBox3").value;
+
+// テーブルのtbody要素を取得
+var tableBody = document.getElementById("dataTable").getElementsByTagName("tbody")[0];
+
+if (inputText !== "") {
+// 新しい行を作成
+var newRow = document.createElement("tr");
+
+// 新しいセルを作成してテキストを設定
+var newCell = document.createElement("td");
+var newText = document.createTextNode(inputText);
+newCell.appendChild(newText);
+
+// 新しいセルを行に追加
+newRow.appendChild(newCell);
+
+// 新しい行をテーブルのtbodyに追加
+tableBody.appendChild(newRow);
+}
+
+// テキストエリアをクリア
+document.getElementById("myTextBox3").value = "";
+}
+function selectText(element) {
+  element.classList.toggle("selected");  // 選択した項目に"selected"クラスを追加または削除
+}
+function deleteButton1() {
+  let sport1 = document.getElementById("sport1"); //73、74の2行はおそらく必要ない
+  let selectedElements = sport1.getElementsByClassName("selected");
+  while (selectedElements.length > 0) {
+      let selectedElement = selectedElements[0];
+      let selectedText = selectedElement.textContent;
+      let index = textArray2.indexOf(selectedText);
+      if (index > -1) {
+          textArray2.splice(index, 1);  // 配列からテキストを削除
+      }
+      selectedElement.remove();  // 項目を表示から削除
+  }
+}
+</script>
 </body>
 </html>
