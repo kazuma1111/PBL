@@ -11,7 +11,7 @@
 <h1>得点入力画面</h1>
 </header>
 <p>得点変更したいチームを選択してください</p>
-<div class="button_line007">
+<div>
 <form action="勝敗選択.html" method="get">
         <input class="example" type="checkbox" name="checkboxState" value="true">
     <label>
@@ -22,11 +22,17 @@
     <label>
         <input type="checkbox" name="checkboxLabel" value="チームC">
         チームC
-    </label><br>
-
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="checkboxLabel" value="チームD">
+        チームD
+    </label>
+    <div class="button_line007" style="display: flex;">
     <!-- 他のチームのチェックボックスも追加 -->
-    <a type="button" href="勝敗選択.html">入力</a>
-    <a type="button" href="競技選択.html">戻る</a>
+        <a type="button" href="勝敗選択.html" style="width: 10rem;top: 2rem; margin-right: 5rem;">戻る</a>
+        <a type="button" href="競技選択.html" style="width: 10rem;top: 2rem; margin-left: 5rem;">入力</a>
+    </div>
 </form>
 
   </div>
