@@ -88,16 +88,11 @@ p1 {
   bottom: 0;
 }
 /*テーブル用css*/
-.table-container {
-  position: absolute;
-  top: 500px;
-  left: 500%;
-}
 table {
   width: 300px;
   position: absolute;
-  top: 200px;
-  left: 530px;
+  top: 25%;
+  left: 40%;
 }
 table {
   border-collapse:  collapse; /* セルの線を重ねる */ 
