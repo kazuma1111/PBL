@@ -294,7 +294,7 @@ transition: border-color 0s ease-out 0.2s, width 0.15s ease-out 0.2s, height 0.1
   height: 200px;
   font-size: 20px;
 }
-::placeholder{
+//**::placeholder{
   font-size: 20px;
 }
 
