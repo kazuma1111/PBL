@@ -73,8 +73,14 @@ img.loginImg {
   bottom: 100;
 
 }
-p1 {
+.p1 {
   height: 22px;
+}
+.button_line007{
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 35vh;
 }
 /* チーム名管理用のCSS */
 .button1 {
@@ -94,7 +100,7 @@ table {
   top: 25%;
   left: 40%;
 }
-table {
+table { 
   border-collapse:  collapse; /* セルの線を重ねる */ 
 }
 th {
@@ -135,6 +141,12 @@ width: 100%;
 .example{
   display: none;
 }
+/*競技選択画面のcss*/
+.button_transition{
+  width: 10rem;
+  top: 2rem;
+  margin-left: 5rem
+}
 
 /* スマホ */
 @media (max-width: 600px) {
@@ -167,6 +179,11 @@ width: 100%;
     right: 150px;
     bottom: 0;
   }
+  /*ランキング管理画面のcss */
+  .button_line007{
+    display: block;
+  }
+ 
 }
 PHP
 .parent {
@@ -294,7 +311,7 @@ transition: border-color 0s ease-out 0.2s, width 0.15s ease-out 0.2s, height 0.1
   height: 200px;
   font-size: 20px;
 }
-//**::placeholder{
+/**::placeholder{
   font-size: 20px;
 }
 

@@ -12,9 +12,18 @@
        }
     }
     function changeLink() {
+      let name = document.getElementById("myTextBox").value;
+      let password = document.getElementById("myTextBox2").value;
       let dropdown = document.getElementById("myDropdown");
-      let selectedValue = dropdown.value;
-      window.location.href = selectedValue;
+      if (name === "管理者" && password === "oic123") {
+        let selectedValue = dropdown.value;
+        window.location.href = selectedValue;
+      } else if (name === "入力者" && password === "oic987") {
+        let selectedValue = dropdown.value;
+        window.location.href = selectedValue;
+      } else {
+        alert("アカウントまたはパスワードが違います。");
+      }
     }
 
 //チーム名管理.html用
