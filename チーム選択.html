@@ -15,27 +15,53 @@
 <form action="勝敗選択.html" method="get">
         <input class="example" type="checkbox" name="checkboxState" value="true">
     <label>
-        <input type="checkbox" name="checkboxLabel" value="チームB">
+        <input type="checkbox" name="checkboxLabel" value="チームB" onclick="limitCheckbox(this)">
         チームB
     </label>
     <br>
     <label>
-        <input type="checkbox" name="checkboxLabel" value="チームC">
+        <input type="checkbox" name="checkboxLabel" value="チームC" onclick="limitCheckbox(this)">
         チームC
     </label>
     <br>
     <label>
-        <input type="checkbox" name="checkboxLabel" value="チームD">
+        <input type="checkbox" name="checkboxLabel" value="チームD" onclick="limitCheckbox(this)">
         チームD
     </label>
     <div class="button_line007" style="display: flex;">
     <!-- 他のチームのチェックボックスも追加 -->
-        <a type="button" href="勝敗選択.html" style="width: 10rem;top: 2rem; margin-right: 5rem;">勝ち負け</a>
-        <a type="button" href="点数入力.html" style="width: 10rem;top: 2rem; margin-left: 5rem;">点数</a>
+
+        <a type="button" style="width: 10rem;top: 2rem; margin-right: 5rem;" onclick="buttonClicked(1)">勝ち負け</a>
+        <a type="button" style="width: 10rem;top: 2rem; margin-left: 5rem;" onclick="buttonClicked(2)">点数</a>
     </div>
 </form>
 
   </div>
+  
+<script>
+    function limitCheckbox(checkbox) {
+      var checkboxes = document.getElementsByName('checkboxLabel');
+      for (var i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].checked = false; // すべてのチェックボックスを未選択にする
+      }
+      checkbox.checked = true; // クリックされたチェックボックスを選択する
+    }
+    function buttonClicked(buttonId) {
+        if (buttonId === 1) {
+            confirmationMessage = '点数形式：勝ち負け こちらの選択で間違いありませんか？';
+          // ここにボタン1に関連する処理を記述する
+        } else if (buttonId === 2) {
+            confirmationMessage = '点数形式：点数 こちらの選択で間違いありませんか？';
+          // ここにボタン2に関連する処理を記述する
+        }
+        var userConfirmation = confirm(confirmationMessage);
+        if (userConfirmation) {
+            window.location.assign("http://127.0.0.1:5500/%E5%8B%9D%E6%95%97%E9%81%B8%E6%8A%9E.html");
+        } else {
+          alert("選び直してね");
+        }
+      }
+</script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var form = document.querySelector('form');
