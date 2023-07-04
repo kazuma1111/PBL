@@ -37,48 +37,47 @@
 </div>
 
   <script>
-    let textArray2 = [];  // テキストの配列を管理する変数
-function teamFactory() {
-  // テキストエリアの値を取得
-  let inputText = document.getElementById("myTextBox4").value
+    function teamFactory() {
+    // テキストエリアの値を取得
+    let inputText = document.getElementById("myTextBox4").value;
 
-  // テーブルのtbody要素を取得
-  let tableBody = document.getElementById("dataTable").getElementsByTagName("tbody")[0];
+    // テーブルのtbody要素を取得
+    let tableBody = document.getElementById("dataTable").getElementsByTagName("tbody")[0];
 
-  if (inputText !== "") {
-  // 新しい行を作成
-  let newRow = document.createElement("tr");
+    if (inputText !== "") {
 
-  // 新しいセルを作成してテキストを設定
-  let newCell = document.createElement("td");
-  let newText = document.createTextNode(inputText);
-  newCell.appendChild(newText);
+    // 新しい行を作成
+    var newRow = document.createElement("tr");
 
-  // 新しいセルを行に追加
-  newRow.appendChild(newCell);
+    // 入力テキストを表示するセルを作成
+    var textCell = document.createElement("td");
+    textCell.innerText = inputText;
 
-  // 新しい行をテーブルのtbodyに追加
-  tableBody.appendChild(newRow);
+    // 削除ボタンを表示するセルを作成
+    var deleteCell = document.createElement("td");
+    var deleteButton = document.createElement("button");
+    deleteButton.innerText = "削除";
+    deleteButton.onclick = function() {
+      deleteRow(newRow);
+    };
+    deleteCell.appendChild(deleteButton);
 
-  // 操作セルを作成
-  var operationCell = newRow.insertCell();
-        var deleteButton = document.createElement("button");
-        deleteButton.innerText = "削除";
-        deleteButton.onclick = function() {
-          // 削除ボタンがクリックされたときの処理
-          deleteRow(this); // 削除ボタンの親要素を渡して削除処理を実行
-        };
-        operationCell.appendChild(deleteButton);
+    // 行にセルを追加
+    newRow.appendChild(textCell);
+    newRow.appendChild(deleteCell);
+
+    // テーブルに行を追加
+    tableBody.appendChild(newRow);
+
+    // テキストエリアをクリア
+    document.getElementById("myTextBox4").value = "";
+    }
+
+    function deleteRow(row) {
+    var tableBody = document.getElementById("dataTable").getElementsByTagName("tbody")[0];
+    tableBody.removeChild(row);
+    alert(inputText + "を削除しました");
   }
-
-  // テキストエリアをクリア
-  document.getElementById("myTextBox4").value = "";
-}
-
-function deleteRow(button) {
-  let tableBody = document.getElementById("dataTable").getElementsByTagName("tbody")[0];
-  var row = button.parentNode.parentNode;
-  tableBody.removeChild(row);
 }
 </script>
 </body>
