@@ -112,6 +112,11 @@ td {
   border: 1px solid rgb(0, 0, 0);
   padding: 10px; 
 }
+.button_table{
+  justify-content: center; 
+  align-items: center; 
+  height: 35vh;
+}
 
 /* 入力アカウント管理用 */
 .container2 {
@@ -303,6 +308,55 @@ border-right-color: #eee;
 transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
 }
 .button_line007 a:hover:after {
+border-bottom-color: #eee;
+border-left-color: #eee;
+transition: border-color 0s ease-out 0.2s, width 0.15s ease-out 0.2s, height 0.15s ease-out 0.3s;
+}
+
+/* table用button */
+.button_table a {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 220px;
+  padding: 10px 25px;
+  color: #313131;
+  transition: 0.3s ease-in-out;
+  font-weight: 600;
+  background: #06c5f5;
+}
+.button_table a:hover {
+  background: #b8df0b;
+  color: #eee;
+}
+.button_table a:before, .button_table a:after {
+box-sizing: inherit;
+content: "";
+position: absolute;
+border: 2px solid transparent;
+width: 0;
+height: 0;
+}
+.button_table a:before {
+top: 0;
+left: 0;
+}
+.button_table a:after {
+bottom: 0;
+right: 0;
+}
+.button_table a:hover:before, .button_table a:hover:after {
+width: 100%;
+height: 100%;
+}
+.button_table a:hover:before {
+border-top-color: #eee;
+border-right-color: #eee;
+transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+}
+.button_table a:hover:after {
 border-bottom-color: #eee;
 border-left-color: #eee;
 transition: border-color 0s ease-out 0.2s, width 0.15s ease-out 0.2s, height 0.15s ease-out 0.3s;
