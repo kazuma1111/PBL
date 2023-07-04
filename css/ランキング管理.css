@@ -1,0 +1,20 @@
+.button_line007{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+}
+.choice{
+    margin-right: 5rem;
+}
+.choice1{
+    margin-left: 5rem;
+}
+.button9{
+    width: 10rem;
+}
+.button10{
+    width: 10rem;
+    top: 2rem; 
+    margin-right: 5rem;
+}

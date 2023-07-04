@@ -69,10 +69,6 @@ img.loginImg {
   right: 10px;
 }
 /* ランキング管理画面のCSS　*/
-.button {
-  bottom: 100;
-
-}
 .p1 {
   height: 22px;
 }
@@ -205,7 +201,7 @@ PHP
   justify-content: center;
   align-items: center;
   height: 10vh;
-  width: 100;
+  width: 100px;
   padding: 0px;
 }
 .button5 {

@@ -25,7 +25,7 @@
         alert("アカウントまたはパスワードが違います。");
       }
     }
-//チーム名管理.html用
+//入力アカウント管理.html用
     let textArray = [];  // テキストの配列を管理する変数
     function accountFactory() {
       let addName = document.getElementById("myTextBox");

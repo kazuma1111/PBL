@@ -5,13 +5,14 @@
 <title>ログイン画面</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/PBL.css">
+<link rel="stylesheet" href="css/ログイン.css">
 <script src="js/PBL.js"></script>
 </head>
 <body>
     <header>
 <h1>ログイン画面</h1>
     </header>
-<select id="myDropdown" onchange="handleSelection()" style="width: 6rem; height: 3rem; font-size: 1.3rem;">
+<select id="myDropdown" onchange="handleSelection()" >
     <option value="ランキング管理画面.html">管理者</option>
     <option value="入力者管理画面.html">入力者</option>
 </select>
@@ -22,8 +23,8 @@
 <img src="JPEG/kagi.png" class="loginImg"><input type="text" name="myTextBox" id="myTextBox2" placeholder="Password">
 </div>
 <div class="button_line007">
-    <a href="#" onclick="changeLink()" style=" position:  absolute;  width: 10rem;top: 2rem; left: 43%;">ログイン</a>
-    <a type="button" href="ランキング.html" style="width: 10rem;top: 2rem; margin-right: 5rem;">戻る</a>
+    <a href="#" onclick="changeLink()" class="button13" >ログイン</a>
+    <a type="button" class="button14" href="ランキング.html">戻る</a>
 </div>
 </body>
 </html>

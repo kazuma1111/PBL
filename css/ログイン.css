@@ -1,0 +1,16 @@
+.myDropdown{
+    width: 6rem;
+    height: 3rem; 
+    font-size: 1.3rem;
+}
+.button13{
+    position:  absolute;
+    width: 10rem;
+    top: 2rem;
+    left: 26%;
+}
+.button14{
+    width: 10rem;
+    top: 2rem; 
+    right: -10rem;
+}
