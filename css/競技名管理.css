@@ -1,7 +1,7 @@
-.myTextBox3{
-    width: 250px;
+.myTextBox3 {
+    width: 200px;
     height: 40px;
-    font-size: 400px
+    font-size: 16px; /* 適切なフォントサイズを指定してください */
 }
 .button17{
     width: 10rem;
