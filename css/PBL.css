@@ -69,6 +69,9 @@ img.loginImg {
   right: 10px;
 }
 /* ランキング管理画面のCSS　*/
+.button {
+  bottom: 100;
+}
 .p1 {
   height: 22px;
 }
@@ -76,7 +79,7 @@ img.loginImg {
   display: flex; 
   justify-content: center; 
   align-items: center; 
-  height: 35vh;
+  height: 30vh;
 }
 /* チーム名管理用のCSS */
 .button1 {
@@ -94,10 +97,8 @@ table {
   width: 300px;
   position: absolute;
   top: 25%;
-  left: 40%;
-}
-table { 
-  border-collapse:  collapse; /* セルの線を重ねる */ 
+  left: 35%;
+  border-collapse:  collapse; /* セルの線を重ねる */
 }
 th {
   background-color: #06c5f5;
@@ -111,7 +112,8 @@ td {
 .button_table{
   justify-content: center; 
   align-items: center; 
-  height: 35vh;
+  height: 15vh;
+  display: flex;
 }
 
 /* 入力アカウント管理用 */
@@ -122,40 +124,24 @@ td {
   left: 30%;
 }
 .email{
-  width: 270px;
-}
-.container2 {
-  display: flex;
-  align-items: center; /* 縦方向の中央揃え */
+  width: 200rem;
 }
 
-.container2 p {
-  margin-right: 10px; /* テキストとボタンの間にスペースを設定 */
-}
-.accountcontainer {
-  width: 300px; /* 幅を設定 */
-  height: 200px; /* 高さを設定 */
-  overflow: auto; /* スクロールバーを表示 */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 
-.content {
-  justify-content: space-between;
-} 
-.item {
-width: 100%;
-}
-
-.example{
-  display: none;
-}
 /*競技選択画面のcss*/
 .button_transition{
   width: 10rem;
   top: 2rem;
-  margin-left: 5rem
+  margin-left: 5rem;
+  position: absolute;
+}
+
+/*戻る、次へボタン*/
+#back{
+  width: 10rem;top: 25rem; margin-right: 25rem;
+}
+#next{
+  width: 10rem;top: 25rem; margin-left: 5rem;
 }
 
 /* スマホ */
@@ -189,11 +175,88 @@ width: 100%;
     right: 150px;
     bottom: 0;
   }
-  /*ランキング管理画面のcss */
+  
+  /*line007のflex解除 */
   .button_line007{
     display: block;
   }
- 
+  /*button_tableのflex解除 */
+  .button_table{
+    display: block;
+    margin-left: 5rem;
+    flex-direction: column;
+  }
+  /*戻るボタン*/
+  #back{
+    left: 10%;
+    bottom: 110%;
+  }
+  /*次へボタンなど*/
+  #next{
+    right: 17%;
+    bottom: 110%;
+  }
+  /*tabale*/
+  table{
+    left: 15%;
+  }
+  /*チーム選択*/
+  .resp_TeamSelect{
+    width: 10rem;
+    }
+  /*チーム名管理*/
+  .resp_TeamAdmin{
+    width: 10rem;
+    }
+  /*ランキング*/
+  .resp_Ranking{
+    width: 10rem;
+    }
+  /*ランキング管理画面*/
+  .resp_RankingAdmin{
+    width: 10rem;
+    }
+  /*ログイン*/
+  .resp_Rogin{
+    width: 10rem;
+    }
+  /*競技選択*/
+  .resp_CompetitionSelect{
+    width: 10rem;
+    }
+  /*競技名管理*/
+  .resp_CompetitionAdmin{
+    width: 10rem;
+    }
+  /*勝敗選択*/
+  .resp_VictorySelect{
+    width: 10rem;
+    }
+  /*点数入力*/
+  .resp_PointInput{
+    width: 10rem;
+    }
+  /*入力アカウント管理*/
+  .resp_InputAccountAdmin{
+    width: 10rem;
+    }
+    .inputacount{
+      width: 350px;
+      position: absolute;
+      top: 25%;
+      left: 10%;
+    }
+    .email{
+      width: 150px;
+    }
+    .delete{
+      width: 50px;
+    }
+  /*入力者管理画面*/
+  .resp_InputerAdmin{
+    width: 10rem;
+    }
+
 }
 PHP
 .parent {
@@ -373,15 +436,3 @@ transition: border-color 0s ease-out 0.2s, width 0.15s ease-out 0.2s, height 0.1
 /**::placeholder{
   font-size: 20px;
 }
-
-
-
-
-
-
-
-  
-  
-  
-  
-  
