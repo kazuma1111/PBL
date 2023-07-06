@@ -9,8 +9,8 @@
     height: 25px; 
     font-size: 20px;
 }
+
 .button21 {
     width: 10rem;
-    top: 2rem; 
-    margin-left: 25rem;
+    float: right;
 }
