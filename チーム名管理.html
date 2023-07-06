@@ -21,7 +21,7 @@
       <thead>
         <tr>
           <th>登録チーム</th>
-          <th>削除ボタン</th>
+          <th>削除</th>
         </tr>
       </thead>
       <tr>
@@ -30,9 +30,9 @@
       </tr>
         </table>
     </div>
-  <div class="button_table" style="display: flex;">
-    <a type="button" href="競技名管理.html" style="width: 10rem;top: 25rem; margin-right: 25rem;">戻る</a>
-    <a type="button" href="ランキング管理画面.html" style="width: 10rem;top: 25rem; margin-left: 5rem;">完了</a>
+  <div class="button_table">
+    <a type="button" href="競技名管理.html" id="back">戻る</a>
+    <a type="button" href="ランキング管理画面.html" id="next">完了</a>
 </div>
 
   <script>
@@ -75,7 +75,7 @@
     function deleteRow(row) {
     var tableBody = document.getElementById("dataTable").getElementsByTagName("tbody")[0];
     tableBody.removeChild(row);
-    alert(inputText + "を削除しました");
+    //alert(inputText + "を削除しました");
   }
 }
 </script>
