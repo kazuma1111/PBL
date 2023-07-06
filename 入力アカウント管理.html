@@ -21,7 +21,32 @@
   <br>
   <button type="button" onclick="accountFactory()" class="button21">追加</button>
 </div>
+  <div class="alertarea">
+  <input type="email" name="myTextBox" id="myTextBox" style="width: 250px; height: 25px; font-size: 20px;" font-size: 20px; placeholder="新規アドレス(@OICのみ)" maxlength="23">
+  <input type="tel" name="myTextBox" id="myTextBox2" style="width: 250px; height: 25px; font-size: 20px;" font-size: 20px; placeholder="パスワード(8文字の数字)"  maxlength="8">
+  <button type="button" onclick="accountFactory()">追加</button>
+</div>
 
+<div class="content1">
+  <table id="dataTable" class="inputacount">
+    <thead>
+      <tr>
+        <th class="email">email</th>
+        <th>pass</th>
+        <th class="delete">削除</th>
+      </tr>
+    </thead>
+      <tbody>
+      </tbody>
+      </table>
+  </div>
+
+  <div class="button_table">
+    <a type="button" href="ランキング管理画面.html" style="width: 10rem;top: 20rem; margin-left: 5rem;">戻る</a>
+    <input type="email" name="myTextBox" class="myTextBox" placeholder="新規アドレス(@OICのみ)" maxlength="23">
+    <input type="tel" name="myTextBox" class="myTextBox2" placeholder="パスワード(8文字の数字)"  maxlength="8">
+    <button type="button" onclick="accountFactory()">追加</button>
+  </div>
 <div class="container2">
 <p>登録済みアカウント</p>
 <button class="button" onclick="deleteButton()">削除</button>
