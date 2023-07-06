@@ -25,7 +25,8 @@
         alert("アカウントまたはパスワードが違います。");
       }
     }
-//アカウント管理.html用
+
+//入力アカウント管理.html用
     function accountFactory() {
       let addName = document.getElementById("myTextBox");
       let addPass = document.getElementById("myTextBox2");

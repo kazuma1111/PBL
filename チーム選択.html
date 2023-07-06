@@ -5,6 +5,7 @@
 <title>チーム選択画面</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/PBL.css">
+<link rel="stylesheet" href="css/チーム選択.css">
 </head>
 <body>
 <header>
@@ -28,14 +29,9 @@
         <input type="checkbox" name="checkboxLabel" value="チームD" onclick="limitCheckbox(this)">
         チームD
     </label>
-    <div class="button_line007" style="display: flex;">
-    <!-- 他のチームのチェックボックスも追加 -->
-
-        <a type="button" style="width: 10rem;top: 2rem; margin-right: 5rem;" onclick="buttonClicked(1)">勝ち負け</a>
-        <a type="button" style="width: 10rem;top: 2rem; margin-left: 5rem;" onclick="buttonClicked(2)">点数</a>
-    </div>
-    <div class="button_line007" style="display: flex;">
-    <a type="button" href="競技選択.html" style="width: 10rem;top: 2rem; margin-left: 30%;">戻る</a>
+    <div class="button_line007" >
+        <a type="button" class="button11" onclick="buttonClicked(1)">勝ち負け</a>
+        <a type="button" class="button12" onclick="buttonClicked(2)">点数</a>
     </div>
 </form>
 
