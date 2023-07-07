@@ -14,3 +14,18 @@
     width: 10rem;
     float: right;
 }
+.myTextBox {
+    width: 250px; 
+    height: 25px; 
+    font-size: 20px
+}
+.myTextBox2 {
+    width: 250px; 
+    height: 25px; 
+    font-size: 20px
+}
+.button29 {
+    width: 10rem;
+    top: 20rem; 
+    margin-left: 5rem;
+}
