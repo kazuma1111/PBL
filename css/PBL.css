@@ -176,9 +176,9 @@ td {
     bottom: 0;
   }
   
-  /*line007のflex解除 */
+  /*line007を縦並べ */
   .button_line007{
-    display: block;
+    flex-direction: column;
   }
   /*button_tableのflex解除 */
   .button_table{
