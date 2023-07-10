@@ -20,3 +20,9 @@
     top: 2rem; 
     margin-right: 5rem;
 }
+@media (max-width: 600px) {
+    .button10{
+        position: absolute;
+        left: 6%;
+    }
+}

@@ -14,3 +14,13 @@
     top: 2rem; 
     left: 3rem;
 }
+@media (max-width: 600px) {
+    .button13{
+        position: absolute;
+        left: 6%;
+    }
+    .button14{
+        position: absolute;
+        left: 6%;
+    }
+}
