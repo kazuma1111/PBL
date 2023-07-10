@@ -126,7 +126,12 @@ td {
 .email{
   width: 200rem;
 }
-
+.pass{
+  width: 100rem;
+}
+.delete{
+  width: 50rem;
+}
 
 /*競技選択画面のcss*/
 .button_transition{
@@ -248,6 +253,9 @@ td {
     }
     .email{
       width: 150px;
+    }
+    .pass{
+      width: 70px;
     }
     .delete{
       width: 50px;
