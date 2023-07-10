@@ -12,5 +12,25 @@
 
 .button21 {
     width: 10rem;
-    float: right;
+    top: 20rem;
+    margin-left: 50rem;
+}
+
+@media (max-width: 600px) {
+/*入力アカウント管理*/
+    .inputacount{
+      width: 350px;
+      position: absolute;
+      top: 25%;
+      left: 10%;
+    }
+    .email{
+      width: 150px;
+    }
+    .pass{
+      width: 70px;
+    }
+    .delete{
+      width: 50px;
+    }
 }
