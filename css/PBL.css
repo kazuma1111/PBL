@@ -232,7 +232,16 @@ td {
   /*競技名管理*/
   .resp_CompetitionAdmin{
     width: 10rem;
+    }.button17{
+      width: 10rem;
+      top: 25rem;
+      margin-right: 25rem;
+    }.button18{
+      width: 10rem;
+      top: 25rem;
+      margin-right: 5rem;
     }
+
   /*勝敗選択*/
   .resp_VictorySelect{
     width: 10rem;
