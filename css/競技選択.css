@@ -8,3 +8,16 @@
     top: 2rem;
     margin-left: 5rem;
 }
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.checkbox-container input[type="checkbox"] {
+  order: -1;
+  margin-right: 5px;
+}
+.checkbox-label {
+  text-align: left;
+}
