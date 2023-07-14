@@ -113,7 +113,7 @@ td {
   justify-content: center; 
   align-items: center; 
   height: 15vh;
-  display: flex;
+  
 }
 
 /* 入力アカウント管理用 */
@@ -191,6 +191,14 @@ td {
     margin-left: 5rem;
     flex-direction: column;
   }
+  .example{
+    display: none;
+  }
+  .inputacount{
+    overflow: auto;
+    max-height: 20px;
+    width: 10%;
+  }
   /*戻るボタン*/
   #back{
     left: 10%;
@@ -266,11 +274,13 @@ td {
     }
 
 }
+
 PHP
 .parent {
  display: flex;
  justify-content: space-between;
 }
+
  
 .child {
  color: #fff;
@@ -441,6 +451,7 @@ transition: border-color 0s ease-out 0.2s, width 0.15s ease-out 0.2s, height 0.1
   height: 200px;
   font-size: 20px;
 }
+
 /**::placeholder{
   font-size: 20px;
 }

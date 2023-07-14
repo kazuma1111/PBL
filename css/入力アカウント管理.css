@@ -49,3 +49,19 @@
           width: 50px;
         }
     }
+
+    td.visible {
+      overflow: visible;
+    }
+    
+    td.hidden {
+      overflow: hidden;
+    }
+    
+    td.scroll {
+      overflow: scroll;
+    }
+    
+    td.auto {
+      overflow: auto;
+    }
